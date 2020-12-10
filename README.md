@@ -17,7 +17,7 @@ The embedded board application allows for LEDs state changes through button clic
 
 Figure 1 displays my code architecture. The project_header file defines configuration functions that are implemented by project_support. 
 
-![](Images/CodeArchitecture.PNG)
+![](Images/CodeArchitecture.png)
 Figure 1: Code Architecture
 
 The term_project file initiates the configuration functions and implements a state machine as shown in Figure 2.
