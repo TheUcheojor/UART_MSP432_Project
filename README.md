@@ -20,13 +20,17 @@ To run the embedded board application, please use KEIL: https://www.keil.com/dow
 
 Figure 1 displays my code architecture. The project_header file defines configuration functions that are implemented by project_support. 
 
+
 ![](Images/CodeArchitecture.png)
 Figure 1: Code Architecture
 
+
 The term_project file initiates the configuration functions and implements a state machine as shown in Figure 2.
+
 
 ![](Images/StateDiagram.PNG)
 Figure 2: State Diagram of Embedded Board Application		
+
 
 There are four states: in order, they are LED 1 OFF/LED 2 OFF, LED 1 ON/LED 2 OFF, LED 1 OFF/LED 2 ON, and LED 1 ON /LED 2 ON. 
  
