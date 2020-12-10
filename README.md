@@ -1,12 +1,14 @@
 # UART_MSP432_Project
 
-The monitoring application was developed using Python. Python provides a pyserial library, which when paired with its keyboard library, provides tools to write and read the current state of the embedded board. 
+The purpose of this project is to create two applications that communicate using UARTs. 
+
+The first application is a monitoring app that communicates with the embedded board via serial port over USB connection.The monitoring application was developed using Python. Python provides a pyserial library, which when paired with its keyboard library, provides tools to write and read the current state of the embedded board. 
 
 Install the pyserial library:
 ```pip install pyserial```
 
 Install the keyboard library:
-```pip install keyboard``
+```pip install keyboard```
 
 
 The application runs a while loop that prints the current state of the board when it is updated on the application or the embedded board. The monitoring application also has keyboard interrupts for ‘w’ and ‘s’. The ‘w’ keyboard interrupt increments the state of the embedded board by one; the ‘s’ keyboard interrupt decrements the state of the embedded board by one. State increments work by sending the byte ‘w’ to the board; state decrements work by sending the byte ‘s’ to the board.
@@ -15,12 +17,12 @@ The embedded board application allows for LEDs state changes through button clic
 
 Figure 1 displays my code architecture. The project_header file defines configuration functions that are implemented by project_support. 
 
-!()[Images/CodeArchitecture]
+![](Images/CodeArchitecture.PNG)
 Figure 1: Code Architecture
 
 The term_project file initiates the configuration functions and implements a state machine as shown in Figure 2.
 
-!()[Images/StateDiagram]
+![](Images/StateDiagram.PNG)
 Figure 2: State Diagram of Embedded Board Application		
 
 There are four states: in order, they are LED 1 OFF/LED 2 OFF, LED 1 ON/LED 2 OFF, LED 1 OFF/LED 2 ON, and LED 1 ON /LED 2 ON. 
