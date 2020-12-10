@@ -22,6 +22,7 @@ Figure 1 displays my code architecture. The project_header file defines configur
 
 
 ![](Images/CodeArchitecture.png)
+
 Figure 1: Code Architecture
 
 
@@ -29,6 +30,7 @@ The term_project file initiates the configuration functions and implements a sta
 
 
 ![](Images/StateDiagram.PNG)
+
 Figure 2: State Diagram of Embedded Board Application		
 
 
